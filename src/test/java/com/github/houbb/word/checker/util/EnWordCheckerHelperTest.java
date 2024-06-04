@@ -47,6 +47,7 @@ public class EnWordCheckerHelperTest {
         final String word = "goox";
         List<String> stringList = WordCheckerHelper.correctList(word);
         Assert.assertEquals("[good, goo, goon, goof, gook, goop, goos, gox, goog, gool, goor]", stringList.toString());
+        System.out.println(stringList);
     }
 
     /**
@@ -72,6 +73,7 @@ public class EnWordCheckerHelperTest {
         final int limit = 2;
         List<String> stringList = WordCheckerHelper.correctList(word, limit);
         Assert.assertEquals(2, stringList.size());
+        System.out.println(stringList);
     }
 
     /**

@@ -26,6 +26,7 @@ public class EnWordCheckerHelperTextTest {
         final String text = "I lovv you";
         String result = WordCheckerHelper.correct(text);
         Assert.assertEquals("I love you", result);
+        System.out.println(result);
     }
 
     @Test

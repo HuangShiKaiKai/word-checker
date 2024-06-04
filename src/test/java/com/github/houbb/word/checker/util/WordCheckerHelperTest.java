@@ -42,6 +42,8 @@ public class WordCheckerHelperTest {
         final String speling = "speling 你好以毒功毒";
         Assert.assertEquals("hello 你好", WordCheckerHelper.correct(hello));
         Assert.assertEquals("spelling 你好以毒攻毒", WordCheckerHelper.correct(speling));
+        System.out.println(WordCheckerHelper.correct(hello));
+        System.out.println(WordCheckerHelper.correct(speling));
     }
 
     /**
@@ -66,6 +68,13 @@ public class WordCheckerHelperTest {
         final String speling = "speling 你好以毒功毒";
         Assert.assertEquals("{hello=[hello],  =[ ], 你=[你], 好=[好]}", WordCheckerHelper.correctMap(hello, 2).toString());
         Assert.assertEquals("{ =[ ], speling=[spelling, spewing], 你=[你], 好=[好], 以毒功毒=[以毒攻毒]}", WordCheckerHelper.correctMap(speling, 2).toString());
+    }
+
+    @Test
+    @Ignore
+    public void correctList() {
+        final String speling = "reult";
+        System.out.println(WordCheckerHelper.correct(speling));
     }
 
 }
